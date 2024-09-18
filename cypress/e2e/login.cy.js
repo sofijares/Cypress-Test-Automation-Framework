@@ -4,6 +4,7 @@ import LoginPage from '../pages/loginpage'
 describe('Parameterized login test using POM', ()=> {
   let LoginInfo
   before(() => {
+  cy.getAllSessionStorage()
   cy.fixture('param').then((data) =>{
   LoginInfo = data
 
@@ -29,6 +30,12 @@ describe('Parameterized login test using POM', ()=> {
     LoginPage.elements.UsernameInput().should('be.visible').type(LoginInfo.username)
     LoginPage.elements.PasswordInput().should('be.visible').type('This should work, right?')
     LoginPage.login()
+    cy.wait(5000)
   })
+  
+  after(() => {
+    cy.clearAllSessionStorage()
+  })
+  
 })
 

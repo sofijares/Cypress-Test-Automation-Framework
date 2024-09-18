@@ -1,5 +1,20 @@
 {
+  "scripts": {
+  "cy-chrome": "cypress run --browser chrome",
+  "cy-firefox": "cypress run --browser firefox",
+  "cy-electron": "cypress run --browser electron",
+  "cy-edge" : "cypress run --browser edge",
+  "cy-chrome-h": "cypress run --browser chrome --headed",
+  "cy-firefox-h": "cypress run --browser firefox --headed",
+  "cy-electron-h": "cypress run --browser electron --headed",
+  "cy-edge-h" : "cypress run --browser edge --headed"
+},
   "dependencies": {
     "cypress": "^13.14.2"
+  },
+  "devDependencies": {
+    "allure-commandline": "^2.30.0",
+    "allure-cypress": "^3.0.0"
   }
+  
 }
