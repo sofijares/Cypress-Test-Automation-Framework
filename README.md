@@ -1,6 +1,6 @@
 # Cypress-Test-Automation-Framework
 How to setup the project locally? 
-To setup the project locally, you will need to install cypress through the following terminal command: npm install
+To setup the project locally, you will need to install the required dependencies through the following terminal command: npm install
 
 How to run the tests?
 To run the tests, you will enter the following command in your terminal: npx cypress open. Then, you will choose which test (spec) you would like to run and through which browser. These tests are automatically headed, meaning that you will be able to watch your test running through chosen browser. To simplify your work and to not leave Cypress open, you can run the tests through the commands listed in the question below.

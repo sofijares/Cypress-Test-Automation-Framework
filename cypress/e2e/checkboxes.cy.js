@@ -17,23 +17,23 @@ describe('Checkbox verification using POM', ()=> {
 
         cy.visit('https://the-internet.herokuapp.com/login')
         cy.wait(1000)
-        LoginPage.elements.UsernameInput().should('be.visible').type(LoginInfo.username)
-        LoginPage.elements.PasswordInput().should('be.visible').type(LoginInfo.password)
-        LoginPage.login()
+        LoginPage.EnterUsername(LoginInfo.username)
+        LoginPage.EnterPassword(LoginInfo.password)
+        LoginPage.loginBtn()
         cy.wait(1000)
 
       })
     
     it('Verifying autoselected checkbox', function() {
 
-        //Verify that checkbox 2 is automatically selected after logging into account and going to the following url
+        //Verify that checkbox 2 is automatically selected after logging into account
         cy.visit('https://the-internet.herokuapp.com/checkboxes')
         cy.wait(1000)
         cy.get('[checked=""]').should('be.checked')
         cy.wait(1000)
-        checkboxes.elements.Checkbox1().should('be.visible').click()
+        checkboxes.ClickOnCheckbox.ClickCheckbox1()
         cy.wait(1000)
-        checkboxes.elements.Checkbox2().should('be.checked').click()
+        checkboxes.ClickOnCheckbox.ClickCheckbox2()
         cy.wait(5000)
       })
 

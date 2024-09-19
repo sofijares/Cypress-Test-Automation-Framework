@@ -6,7 +6,17 @@ class LoginPage {
         ClickButton : () => cy.get('.radius')
     }
 
-    login() {
+    EnterUsername(username) {
+        this.elements.UsernameInput().clear();
+        this.elements.UsernameInput().type(username)
+    }
+
+    EnterPassword(password) {
+        this.elements.PasswordInput().clear()
+        this.elements.PasswordInput().type(password)
+    }
+
+    loginBtn() {
         this.elements.ClickButton().click()
     }
 }
