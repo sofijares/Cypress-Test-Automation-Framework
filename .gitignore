@@ -130,6 +130,8 @@ dist
 .pnp.*
 
 
-allure-report/
-allure-results/
+allure-report/*
+!allure-report/.gitkeep
+allure-results/*
+!allure-results/.gitkeep
 cypress/screenshots/
