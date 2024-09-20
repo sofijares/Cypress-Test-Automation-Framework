@@ -19,5 +19,11 @@ jobs:
       uses: actions/checkout@v4
     - name: Install cypress
       run: npm install
-    - name: Run test
-      run: npm run cy-chrome-h
+    - name: Run test on Chrome
+      run: npm run cy-chrome
+    - name: Run test on Firefox
+      run: npm run cy-firefox
+    - name: Run test on Electron
+      run: npm run cy-electron
+    - name: Run test on Edge
+      run: npm run cy-edge
