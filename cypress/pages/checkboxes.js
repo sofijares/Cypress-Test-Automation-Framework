@@ -1,4 +1,9 @@
-class Checkbox {
+import { BasePage } from "./basepage";
+
+class Checkbox extends BasePage {
+    constructor (){
+        super()
+    }
     elements = {
         
         Checkbox1 : () => cy.get('#checkboxes > :nth-child(1)'),

@@ -1,5 +1,9 @@
+import { BasePage } from "./basepage";
 
-class LoginPage {
+class LoginPage extends BasePage {
+    constructor (){
+        super()
+    }
     elements = {
         UsernameInput: () => cy.get('#username'),
         PasswordInput: () => cy.get('#password'),
