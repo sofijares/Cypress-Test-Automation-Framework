@@ -1,0 +1,22 @@
+# This is a basic workflow that is automatically trigged on every commit
+
+name: Automated workflow
+
+# Controls when the action will run. Workflow runs when manually triggered using the UI
+# or API.
+on:
+ push
+
+
+jobs:
+
+  test:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+
+    - name: Install cypress
+      run: npm install
+    - name: Run test
+      run: npm run cy-chrome-h
