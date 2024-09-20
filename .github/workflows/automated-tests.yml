@@ -15,7 +15,8 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-
+    - name: checkout repo
+      uses: actions/checkout@v4
     - name: Install cypress
       run: npm install
     - name: Run test
