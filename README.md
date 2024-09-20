@@ -18,3 +18,6 @@ First, you will need to run your tests to have a basis for generating your repor
 Then, in your terminal, you will need to generate reports through the following command: allure generate ./allure-results -o ./allure-report
 In case it's already in use, add a '--clean' option to overwrite it.
 Finally, you will need to open your report through the following command: allure open ./allure-report
+
+If you've decided to download the test report through the test that runs on GitHub Actions, you should open the downloaded folder in your Visual Studio Code and type the following command in your terminal:
+allure open ./
