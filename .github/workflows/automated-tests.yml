@@ -19,6 +19,8 @@ jobs:
       uses: actions/checkout@v4
     - name: Install cypress
       run: npm install
+    - name: Install Allure
+      run: npm install -g allure-commandline --save-dev
     - name: Run test on Chrome
       run: npm run cy-chrome
     - name: Run test on Firefox
